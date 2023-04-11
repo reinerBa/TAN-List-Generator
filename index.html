@@ -13,8 +13,10 @@
     <h3>
   Tan Liste from  __________________ for ________________________
 </h3>
-	  <a href="https://github.com/reinerBa/TAN-List-Generator/">Presented via github pages from this Repository</a>	  
+
 <div id="app">
+  <a href="https://github.com/reinerBa/TAN-List-Generator/">Presented via github pages from this Repository https://github.com/reinerBa/TAN-List-Generator</a>
+  <button @click="print">&#128424;</button> <br/>
   <table>
     <tr v-for="item in 40"><td>{{item}}&emsp;</td>
     <td>{{ rand() }}</td>
@@ -52,6 +54,9 @@
     new Vue({
 	el: '#app',
     methods: {
+	    print(){
+	    window.print()
+	    },
   	rand(){
     // Code from https://stackoverflow.com/a/47496558
   		return [...Array(15)].map(() => Math.random().toString(36)[2]).join('').toUpperCase()
