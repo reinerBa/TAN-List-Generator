@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reiners Tan-Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.28/vue.js" integrity="sha512-/I2PC0BuPX4pgUed1MB0BodK/Wn4LJw3b9NiQVZTau2HrACEmHMf/4qGBiIaFCJsgY5GX4JcsHTP0P2pfSimpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h3>
+  Tan Liste from  __________________ for ________________________
+</h3>
+<div id="app">
+  <table>
+    <tr v-for="item in 100"><td>{{item}}&emsp;</td>
+    <td>{{ rand() }}</td>
+  </tr>
+  </table>
+  <table>
+    <tr v-for="item in 100">
+      <td>{{item + 100 }}&emsp;</td>
+      <td>{{ rand() }}</td>
+    </tr>
+  </table>
+  <table>
+    <tr v-for="item in 100">
+      <td>{{item + 200 }}&emsp;</td>
+      <td>{{ rand() }}</td>
+    </tr>
+  </table>
+</div>
+    
+
+    <style>
+      *{
+        font-size: 14px;
+        font-family: arial;
+      }
+      table{
+        float:left;
+      }
+      </style>
+    </body>
+</html>
